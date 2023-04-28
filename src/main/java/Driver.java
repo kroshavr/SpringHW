@@ -30,5 +30,9 @@ public class Driver {
                 ", transport=" + transport +
                 '}';
     }
+    public void startTransport(){
+        System.out.println(getName() + " сел в " + getTransport().getModel());
+        transport.start();
+    }
 }
 

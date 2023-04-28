@@ -17,4 +17,17 @@ public class AppConfig {
     public Pickup getPickupBean() {
         return new Pickup("Ford");
     }
+
+    @Bean (name = "driverCar")
+    public Driver getDriverCarBean(){
+        return new Driver("Jon", getCarBean());
+    }
+    @Bean (name = "driverBus")
+    public Driver getDriverBusBean(){
+        return new Driver("Liam", getBusBean());
+    }
+    @Bean (name = "driverPickup")
+    public Driver getDriverPickupBean(){
+        return new Driver("Jon", getPickupBean());
+    }
 }

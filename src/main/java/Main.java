@@ -5,13 +5,13 @@ public class Main {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Car car = context.getBean(Car.class);
-        car.start();
+      Driver driverCar = context.getBean("driverCar", Driver.class);
+      driverCar.startTransport();
 
-        Bus bus = context.getBean(Bus.class);
-        bus.start();
+      Driver driverBus = context.getBean("driverBus", Driver.class);
+      driverBus.startTransport();
 
-        Pickup pickup = context.getBean(Pickup.class);
-        pickup.start();
+      Driver driverPickup = context.getBean("driverPickup", Driver.class);
+      driverPickup.startTransport();
     }
 }
